@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package service;
+
+option go_package = "gustavo/klever-grpc/proto";
+
+message coinRequest {
+  string name = 1;
+}
+
+message coinResponse {
+  string name = 1;
+  double price = 2;
+  int64 vote = 3;
+}
+
+message createCoinRequest {
+  string name = 1;
+  double price = 2;
+}
+
+message ListCoinRequest {}
+
+message DeleteResponse {
+  string message = 1;
+}
+
+service CurrencyCoinService {
+  rpc createCoin(createCoinRequest) returns (coinResponse);
+  rpc ListCoins(ListCoinRequest) returns (stream coinResponse);
+  rpc UpvoteCoin(coinRequest) returns (coinResponse);
+  rpc DownvoteCoin(coinRequest) returns (coinResponse);
+  rpc Delete(coinRequest) returns (DeleteResponse);
+}

@@ -1,0 +1,28 @@
+package main
+
+import (
+	"context"
+	"fmt"
+
+	pb "gustavo/klever-grpc/proto"
+
+	"google.golang.org/grpc/codes"
+)
+
+func (s *Server) UpvoteCoin(ctx context.Context, in *pb.CoinRequest) (*pb.CoinResponse, error) {
+
+	result, err := Vote(in, 1)
+	if err != nil {
+		return nil, fmt.Errorf(
+			codes.InvalidArgument.String(),
+			fmt.Sprint(err),
+		)
+	}
+
+	return &pb.CoinResponse{
+		Name: result.Name,
+		Price: result.Price,
+		Vote: result.Vote,
+		
+	}, nil
+}

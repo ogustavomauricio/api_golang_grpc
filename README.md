@@ -48,6 +48,8 @@ Para **inicializar o servidor**, execute:
 
 Pronto! Agora você já pode utilizar a apliacação
 
+## Testes
+Para checar se a aplicação está funcionando devidamente, rode na raiz do projeto o comando: ```make test```
 
 ##  🛠️ Como utilizar o insomnia?
 

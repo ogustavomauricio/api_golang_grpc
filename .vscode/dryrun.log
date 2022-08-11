@@ -1,0 +1,4 @@
+make: Entering directory '/home/gustavo/klever-grpc'
+go build -o ./bin/currency-coin/server 
+make: Leaving directory '/home/gustavo/klever-grpc'
+ 

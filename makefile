@@ -5,7 +5,7 @@ server:
 	./bin/currency-coin/server
 
 test:
-	cd src/server && go test
+	go test -v
 
 mod:
 	go mod tidy

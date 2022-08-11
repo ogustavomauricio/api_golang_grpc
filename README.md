@@ -26,7 +26,7 @@ Para iniciar o desenvolvimento, é necessário clonar o projeto do GitHub para s
 
 ```git@github.com:ogustavomauricio/api_golang_grpc.git```
 
-##  🛠️ Instalação do Insomni
+##  🛠️ Instalação do Insomnia
 - **O que é?** 
   Uma ferramenta cliente de API REST, como o Postman, mas tem alguns recursos adicionais, como suporte a GraphQL, gRPC, entre outros.
 
